@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<configuration>
+ <title>Survey Control Point ID # {Point_ID2}</title>
+ <description>
+  <![CDATA[
+ <b>Northing (feet)</b>   {Northing_Feet}
+ <b>Easting (feet)</b>  {Easting_Feet}
+ <b>Coordinate System:</b>
+  St.Louis County Transverse Mercator System 96
+ 
+ <b><a target="_blank"  href="{CornerReport}">Corner Report</a></b>
+ 
+ <b><a target="_blank"  href="{CornerCertificate}">Corner Certificate</a></b>
+  *link only works with using Internet Explorer 
+  	    
+<a target="_blank" href="http://www.stlouiscountymn.gov/GOVERNMENT/OnlineServices/SearchControlPoints.aspx">About St. Louis County Survey Control Points</a>    
+	    ]]>
+	   
+</description>
+</configuration>
+
+
+<!-- <configuration>
+ <title>Parcel ID Number: {PRCL_NBR}</title>
+ <description>
+  <![CDATA[
+ <b>Taxpayer</b>   {TXNAME}
+ <b>Address</b>   {TXADR1}
+                   {TXADR2}
+ <b>Tax District</b>   {TAX_DIST_NAME}
+ <b>Plat Description</b>   {PLDESC}
+ <b>Legal Description</b>   {LEGAL}
+ <b>Lot</b>   {LOT_NBR}
+ <b>Deeded Acres</b>   {DEEDED_ACRES}
+ <b>Township</b>   {TOWNSHIP}     
+ <b>Range</b> 	 {RANGE}  
+ <b>Section</b>   {SECTION}
+ <b>School District</b>   {SCH_DIST}
+ <b>Lake Name</b>   {LAKE_NAME}
+ <b>Owner Name</b>   {OWNAME}
+ 	    
+<a target="_blank" href="http://apps.stlouiscountymn.gov/auditor/parcelInfo2005Iframe/">Parcel Tax Lookup</a>    
+	    ]]>
+	   
+    </description>
+</configuration>-->
+
+
+
+
+
+
+
+<!--
+    Pop-up configuration file for:
+   http://gis.stlouiscountymn.gov/arcgis/rest/services/Planning/CLE_PLSS_Cadastral_Parcels/MapServer/0
+-->

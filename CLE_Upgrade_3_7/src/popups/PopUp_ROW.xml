@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+
+<configuration>
+ <title>Right Of Way</title>
+ <description>
+  <![CDATA[
+ <b>Status</b> {ROW_STATUS}
+ <b>Type</b>  {ROW_TYPE}
+ 
+A right of way is the full easement from one property line to another property line in parallel with each other; the roadway may be within those boundaries as well as public sidewalk and boulevard areas. It is the right given by one landowner to another to pass over the land, construct a roadway, or use as a pathway without actually transferring ownership 	 
+   
+<a target="_blank" href="http://www.stlouiscountymn.gov/GOVERNMENT/DepartmentsAgencies/PublicWorks.aspx">St. Louis County Public Works webpage</a>    
+	    ]]>
+	   
+	   
+	   
+    </description>
+</configuration>
+
+    
+ 
+
+
+<!--
+    Pop-up configuration file for:
+ http://nt-arcgis-pilot/ArcGIS/rest/services/Planning/PortalBase/MapServer/0
+-->
+

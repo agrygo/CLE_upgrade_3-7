@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////
+//
+// Read more about ArcGIS Viewer for Flex - http://links.esri.com/flexviewer
+//
+////////////////////////////////////////////////////////////////////////////////
+-->
+<configuration>
+    <title>COUNTY  LAND  EXPLORER</title>
+    <subtitle>St. Louis County, Minnesota</subtitle>
+    <logo>assets/images/Land-Explorer-36x36.png</logo>
+    <style>
+        <colors>0xFFFFFF,0x333333,0x101010,0x000000,0xffffff</colors>
+        <alpha>0.8</alpha>
+    </style>
+    <!-- SLC Geometry Service -->
+    <geometryservice url="http://gis.stlouiscountymn.gov/arcgis/rest/services/Utilities/Geometry/GeometryServer" />
+	<!-- Bing key, for reference only not used-->
+	<!-- <bing key="Ajm6CVlSoCbfdagQS4AsSiUYFxu0sxoc05XEsqNji7P9R0E0bM4DB4djiC747xak"/> -->
+    <!-- UI elements -->
+    <widget left="10"  top="50"    config="widgets/Navigation/NavigationWidget.xml" url="widgets/Navigation/NavigationWidget.swf"/>
+    <widget right="0" bottom="0"   config="widgets/OverviewMap/OverviewMapWidget.xml" url="widgets/OverviewMap/OverviewMapWidget.swf"/>
+    <widget right="20" top="55"    config="widgets/MapSwitcher/MapSwitcherWidget.xml" url="widgets/MapSwitcher/MapSwitcherWidget.swf"/>
+    <widget left="0"   top="0"     config="widgets/HeaderController/HeaderControllerWidget.xml" url="widgets/HeaderController/HeaderControllerWidget.swf"/>
+
+    <!-- updated initial & full extent for St. Louis County *& MN -->
+    <map wraparound180="true" initialextent="-10679623.4209 5870891.7487 -9899354.2362 6213941.1316" fullextent="-10679623.4209 5870891.7487 -9899354.2362 6213941.1316" top="40" 
+    addarcgisbasemaps="false" attributionvisible="false" esrilogovisible="false" minscale="1:4514">
+        <basemaps>
+        		<layer label="Esri Streets" type="tiled" visible="false" url="http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" icon="assets/images/basemap_streets.jpg"/>
+	            <layer label="Esri Imagery"  type="tiled" visible="false" url="http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" icon="assets/images/basemap_imagery.jpg"/>
+	           	<layer label="USGS Topo" type="tiled" visible="false" url="http://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer" icon="assets/images/basemap_topographic.jpg"/>
+        </basemaps>
+        <operationallayers>
+              <layer label="Administrative Boundaries" type="dynamic" visible="false" imageformat="png32"
+                   url="http://arcgiswaprod/arcgis/rest/services/Planning/CLE_Administrative_Boundaries/MapServer">
+                   <sublayer id="15" popupconfig="popups/PopUp_CE_CommDist.xml"/>
+                   <sublayer id="16" popupconfig="popups/PopUp_CE_MnHouse.xml"/>
+                   <sublayer id="17" popupconfig="popups/PopUp_CE_MNSenate.xml"/>
+                   <sublayer id="4" popupconfig="popups/PopUp_CE_SchoolDistricts.xml"/>
+              </layer>
+              <layer label="Public Lands" type="dynamic" visible="false" imageformat="png32"
+                  url="http://arcgiswaprod/arcgis/rest/services/Planning/CLE_Public_Lands/MapServer">
+          	  </layer>
+              <layer label="Cadastral Parcels" type="dynamic" visible="true" imageformat="png32"
+                   url="http://arcgiswaprod/arcgis/rest/services/Planning/CLE_PLSS_Cadastral_Parcels3/MapServer">
+                    <sublayer id="17" popupconfig="popups/PopUp_Parcels.xml"/>
+                    <sublayer id="0" popupconfig="popups/PopUp_ControlPoints.xml"/>
+              </layer>
+              <layer label="Labels" type="dynamic" visible="true" imageformat="png32"
+                  url="http://arcgiswaprod/arcgis/rest/services/Planning/CLE_Labels/MapServer">
+          	  </layer>
+            
+                       
+        </operationallayers>
+        <lods>
+        	<lod resolution="0.29858214164761665" scale="1128.4971760000001"/>
+			<lod resolution="0.59716428355981721" scale="2256.994353"/>
+			<lod resolution="1.19432856685505" scale="4513.988705"/>
+			<lod resolution="2.38865713397468" scale="9027.977411"/>
+			<lod resolution="4.77731426794937" scale="18055.954822"/>
+			<lod resolution="9.55462853563415" scale="36111.909643"/>
+			<lod resolution="19.1092570712683" scale="72223.819286"/>
+			<lod resolution="38.2185141425366" scale="144447.638572"/>
+			<lod resolution="76.4370282850732" scale="288895.277144"/>
+			<lod resolution="152.874056570411" scale="577790.554289"/>
+			<lod resolution="305.748113140558" scale="1155581.108577"/>
+			<lod resolution="611.49622628138" scale="2311162.217155"/>
+			<lod resolution="1222.99245256249" scale="4622324.434309"/>
+			
+        </lods>
+    </map>
+
+    <!-- widgets organized into widget containers that manage close/open etc -->
+    <!-- supported layout property options: horizontal(default)|float|vertical|fix-->
+    <widgetcontainer layout="float">
+        <widget label="Search" left="100" top="60" preload="open"
+                icon="assets/images/Final-Flex-Search.png"
+                config="widgets/eSearch/eSearchWidget.xml"
+                url="widgets/eSearch/eSearchWidget.swf"/>
+       <widget label="Common Locations"         left="430" top="90"
+                icon="assets/images/Flex-Bookmark-1.png"
+                config="widgets/Bookmark/BookmarkWidget.xml"
+                url="widgets/Bookmark/BookmarkWidget.swf"/>
+       
+      
+        <widget label="Layers" left="100" top="400" 
+        		icon="assets/images/Final-Flex-Map-Layers.png"
+        		 config="widgets/TOC/TOCWidget.xml"
+                url="widgets/TOC/TOCWidget.swf"/>
+        <widget label="Draw & Measure" left="60" top="400"
+                icon="assets/images/Final-Flex-Draw.png"
+                config="widgets/eDraw/eDrawWidget.xml"
+                url="widgets/eDraw/eDrawWidget.swf"/>
+        <widget label="Print" left="390" top="400"
+                icon="assets/images/Final-Flex-Printer.png"
+                config="widgets/Print/PrintWidget.xml"
+                url="widgets/Print/PrintWidget.swf"/>
+    </widgetcontainer>
+    
+</configuration>

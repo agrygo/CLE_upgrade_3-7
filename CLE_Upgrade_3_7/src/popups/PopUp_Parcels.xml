@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<configuration>
+ <title>Parcel ID Number: {PRCL_NBR}</title>
+ <description>
+  <![CDATA[
+ <b>Parcel Type</b> {ParcelType}
+ <b>Address</b> {PHYSADDR} {PHYSCITY} {PHYSZIP}
+ <b>Owner Name</b>  {OWNAME}
+ <b>Owner Address</b> {OWADR1} {OWADR2}
+ <b>Taxpayer</b>   {TXNAME}
+ <b>Address</b>   {TXADR1} {TXADR2}
+ <b>Tax District</b>   {TAX_DIST_NAME}
+ <b>Plat Description</b>   {PLDESC}
+ <b>Lot</b> {LOT_NBR}  <b>Block</b>   {BLOCK_NBR}
+ <b>Deeded Acres</b>   {DEEDED_ACRES}
+ <b>Township</b>  {TOWNSHIP},  <b>Range</b>  {RANGE},   <b>Section</b>  {SECTION}   
+ <b>School District</b>   {SCH_DIST}
+ <b>Lake Name</b>   {LAKE_NAME}
+ 
+ 	    
+<a target="_blank" href="http://apps.stlouiscountymn.gov/auditor/parcelInfo2005Iframe/frmSearchNDetailREV1.aspx?ParcelID={PRCL_NBR}">Parcel Tax Lookup</a>    
+	    ]]>
+	   
+	   
+	   
+    </description>
+</configuration>
+
+    
+ 
+
+
+<!--
+    Pop-up configuration file for:
+ http://nt-arcgis-pilot/ArcGIS/rest/services/Planning/PortalBase/MapServer/0
+-->
+
